@@ -12,7 +12,7 @@ function App() {
         <h3 className="f6 fw1 lh-title">Developer</h3>
       </header>
       <h1 className="f1 f-headline-l fw1 i blue-60">Pulse</h1>
-      <blockquote class="ph0 mh0 measure f4 lh-copy center">
+      <blockquote className="ph0 mh0 measure f4 lh-copy center">
         <p className="fw1 blue-70">
         A tool to capture Developer Framework ratings; the Developer Framework is a 6-attribute framework for evaluating a person’s performance based on the competency expectations for their current level
         </p>
