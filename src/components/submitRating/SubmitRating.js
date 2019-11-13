@@ -40,7 +40,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='quality'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -63,7 +63,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='quantity'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -86,7 +86,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='initiative'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -109,7 +109,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='communication'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -132,7 +132,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='professionalism'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -155,7 +155,7 @@ class SubmitRating extends Component {
             <div className="columnBox" >
                     <input
                   type='text'
-                  value='Feedback'
+                  placeholder='Feedback'
                   name='integration'
                   size= '20'
                   onChange={this.myChangeHandler}
@@ -166,7 +166,7 @@ class SubmitRating extends Component {
                     <textarea
                   rows="12" 
                   cols="63"
-                  value='General Feedback'
+                  placeholder='Description'
                   type='textarea'
                   name='feedback'
                   size= '64'
