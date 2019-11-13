@@ -11,6 +11,7 @@ import App from './App';
 import SubmitRating from './components/submitRating/SubmitRating';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import SignInSingUpWrapper from './components/Login/pulseWraper';
 
 ReactDOM.render(<Router>
 <Switch>
@@ -21,7 +22,8 @@ ReactDOM.render(<Router>
             <Users />
           </Route> */}
           <Route path="/">
-            <App />
+            {/* <App /> */}
+            <SignInSingUpWrapper />
           </Route>
 </Switch>
 </Router>, document.getElementById('root'));
