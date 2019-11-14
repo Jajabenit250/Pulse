@@ -5,54 +5,40 @@ import './Reports.css';
 export class Reports extends Component {
     render() {
         return (
-            <div className="reports-model">
-                <div className="reports-row pd-16">
-                    <div className="reports-header">Reports</div>
-                </div>
-                <div className="reports-row pd-16">
-                    <div className="reports-week">Week one</div>
-                </div>
-                <div className="reports-row">
-                    <div className="reports-table">
-                        <div className="reports-table-row pd-16">
-                            <div className="reports-table-col hd-item">Names</div>
-                            <div className="reports-table-col hd-item">Quality</div>
-                            <div className="reports-table-col hd-item">Quantity</div>
-                            <div className="reports-table-col hd-item">Initiative</div>
-                            <div className="reports-table-col hd-item">Communication</div>
-                            <div className="reports-table-col hd-item">Professionalism</div>
-                            <div className="reports-table-col hd-item">Integration</div>
-                            <div className="reports-table-col hd-item">Average</div>
-                        </div>
-                        <div className="reports-table-row row-items pd-16">
-                            <div className="reports-table-col row-item">Dominique Nsengimana</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">0.8</div>
-                        </div>
-                        <div className="reports-table-row row-items pd-16">
-                            <div className="reports-table-col row-item">Dominique Nsengimana</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">0.8</div>
-                        </div>
-                        <div className="reports-table-row row-items pd-16">
-                            <div className="reports-table-col row-item">Dominique Nsengimana</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">1</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">2</div>
-                            <div className="reports-table-col row-item">0.8</div>
+            <div className="model-container">
+                <div className="reports-model">
+                    <div className="reports-row pd-16">
+                        <div className="reports-header">Reports</div>
+                    </div>
+                    <div className="reports-row pd-16">
+                    <div className="reports-week">{this.props.data.week}</div>
+                    </div>
+                    <div className="reports-row">
+                        <div className="reports-table">
+                            <div className="reports-table-row pd-16">
+                                <div className="reports-table-col hd-item">Names</div>
+                                <div className="reports-table-col hd-item">Quality</div>
+                                <div className="reports-table-col hd-item">Quantity</div>
+                                <div className="reports-table-col hd-item">Initiative</div>
+                                <div className="reports-table-col hd-item">Communication</div>
+                                <div className="reports-table-col hd-item">Professionalism</div>
+                                <div className="reports-table-col hd-item">Integration</div>
+                                <div className="reports-table-col hd-item">Average</div>
+                            </div>
+                            {this.props.data.reports.map((item, index) => {
+                                return (
+                                    <div key={index} className="reports-table-row row-items pd-16">
+                                        <div className="reports-table-col row-item">{item.names}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.quality.rating}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.quantity.rating}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.initiative.rating}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.communication.rating}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.professionalism.rating}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.integration.rating}</div>
+                                        <div className="reports-table-col row-item">{(item.reviews.quality.rating + item.reviews.quantity.rating + item.reviews.initiative.rating + item.reviews.communication.rating + item.reviews.professionalism.rating + item.reviews.integration.rating) / 6}</div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
