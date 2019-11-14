@@ -1,0 +1,95 @@
+
+/* SIGNUP PAGE */
+.signup-box{
+display: grid;
+grid-template-rows: 10vh;
+background-color: white;
+position: absolute;
+width: 481px;
+height: 689px;
+left: 863px;
+top: 42px;
+box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+.signup-logo{
+  position: absolute;
+  width: 124.7px;
+  height: 77.04px;
+  left: 357.3px;
+  top: -1px;
+  
+
+}
+.main-logo{
+  position: absolute;
+width: 346px;
+height: 113px;
+left: 270px;
+top: 393px;
+}
+
+.signup{
+  position: absolute;
+width: 204px;
+height: 70px;
+left: 102px;
+top: -100px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 60px;
+line-height: 70px;
+
+color: #0094FF;
+}
+.main-form{
+
+position: absolute;
+width: 388px;
+height: 554px;
+left: 53px;
+top: 225px;
+}
+#input-border{
+  border: #0094FF solid 1px;
+  margin-bottom: 23px;
+  border-radius: 0px;
+}
+.signin-button{
+  width: 388px;
+height: 66px;
+background-color: #0094FF;
+color: white;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 26px;
+margin-bottom: 23px;
+}
+h5{
+  color: #0094FF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 19px;  
+  margin-bottom: 23px;
+  
+
+  
+}
+
+.main-form a:hover{
+  text-decoration: none;
+}
+.label-text{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+color:  #616161;
+left: 0;
+}
