@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./signup.css";
 class Signup extends Component {
-  state = {};
+
   render() {
     return (
       <div className="signup-box">
@@ -40,8 +41,8 @@ class Signup extends Component {
             <Input label="Full Name" type="text" name="fname" />
             <Input label="Email" type="text" name="email" />
             <Input label="Password" type="password" name="pwd" />
-            <button className="signin-button">Sign up</button>
-            <a href="#">
+            <Link to="/"><button className="signin-button">Sign up</button></Link>
+            <a onClick={()=>{this.props.changeComponent("Signin")}}>
               <Text text="Go to sign in" />
             </a>
           </div>

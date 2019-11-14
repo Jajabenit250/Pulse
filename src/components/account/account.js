@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import '../Login/Login.css';
 import LoginPage from '../Login/login.js';
+import Signup from '../signup/Signup.js';
 import logo from '../Login/images/logo.svg';
 
 export class Account extends Component {
@@ -28,7 +29,7 @@ export class Account extends Component {
                         </svg>
                     </div>
                 </div>
-                {this.state.component == "Signin" ? <LoginPage changeComponent={this.changeComponent}/> : "Sign up"}
+                {this.state.component == "Signin" ? <LoginPage changeComponent={this.changeComponent}/> : <Signup changeComponent={this.changeComponent}/>}
             </div>
         )
     }

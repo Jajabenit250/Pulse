@@ -25,7 +25,7 @@ class LoginPage extends Component {
                         <InputBox label='Email' type='email' name='email' />
                         <InputBox label='Password' type='password' name='password' />
                         <a href='#' id='loginLInk'>Forgot password?</a>
-                        <button className='loginSignUpBtn'>{this.state.title}</button>
+                       <Link to="/"><button className='loginSignUpBtn'>{this.state.title}</button></Link>
                         <a onClick={()=>{this.props.changeComponent("Signup")}} id='loginLInk'>Create account</a>
                     </form>
 
