@@ -1,63 +1,43 @@
 import React, { Component } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import bg_tp from '../../images/bg-tp.svg'
 
 class LoginPage extends Component {
-    state ={
+    state = {
         title: 'Sign in'
     }
-    render() { 
-        return ( 
-       
+    render() {
+        return (
+
             <div className='Lform'>
 
                 <div className='loginImage'>
-                <svg width="125" height="78" viewBox="0 0 125 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M36.0777 0C-8.05526 34.8079 -24.4853 69.2645 64.7602 73.9093C87.1963 75.077 107.201 76.1169 125 77.0412V0H36.0777Z" fill="#0094FF"/>
-</svg>
+                    <img alt="bg-tp" src={bg_tp} />
                 </div>
 
                 <div className='title'>{this.state.title}</div>
 
                 <div className='loginformwraper'>
-                   
-                      <form id='loginForm'>
-                        <LoginForm />
-                      </form>
+
+                    <form id='loginForm'>
+
+                        <label>Email</label>
+                        <input id='email' className='loginSignUpInput' type="email" name='email' />
+
+                        <label>Password</label>
+                        <input id='password' className='loginSignUpInput' type="password" name='password' />
+
+                        <div id='loginLInk'>Forgot password?</div>
+                        <Link to="/"><button className='loginSignUpBtn'>{this.state.title}</button></Link>
+                        <div onClick={() => { this.props.changeComponent("Signup") }} id='loginLInk'>Create account</div>
+                    </form>
 
                 </div>
             </div>
 
-        
-         );
-    }
-}
- 
- class LoginForm extends Component {
-     state={
-         title: 'Sign in'
-     }
-    render() { 
-        return ( 
-            <React.Fragment>
-               <InputBox label='Email' type='email' name='email' />
-               <InputBox label='Password' type='password' name='password' />
-             <a  href='#' id='loginLInk'>Forgot password?</a>
-        <button className='loginSignUpBtn'>{this.state.title}</button>
-           <Link to= "/signup" style={{textDecoration: "none"}}> <a href='#' id='loginLInk'>Create account</a> </Link>
-            </React.Fragment>
-         );
-    }
-}
 
-class InputBox extends Component {
-    render() { 
-        return ( 
-            <React.Fragment> <label>{this.props.label}</label>
-                <input id='loginSignUpInput' type={this.props.type} name={this.props.name} />
-                </React.Fragment>
-               
-         );
+        );
     }
 }
 

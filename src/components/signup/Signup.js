@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import "./signup.css";
 class Signup extends Component {
-  state = {};
+
   render() {
     return (
       <div className="signup-box">
@@ -37,35 +38,26 @@ class Signup extends Component {
             </svg>
           </div>
           <div>
-            <Input label="Full Name" type="text" name="fname" />
-            <Input label="Email" type="text" name="email" />
-            <Input label="Password" type="password" name="pwd" />
-            <button className="signin-button">Sign up</button>
-            <a href="#">
+            <label className="label-text">Full Name</label>
+            <input id="input-border" className="form-control form-control-lg " type="text" name="fname"/>
+            
+            <label className="label-text">Email</label>
+            <input id="input-border" className="form-control form-control-lg " type="email" name="email"/>
+
+            <label className="label-text">Password</label>
+            <input id="input-border" className="form-control form-control-lg " type="password" name="password"/>
+
+            <Link to="/"><button className="signin-button">Sign up</button></Link>
+            <div onClick={()=>{this.props.changeComponent("Signin")}}>
               <Text text="Go to sign in" />
-            </a>
+            </div>
           </div>
         </div>
       </div>
     );
   }
 }
-class Input extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <label className="label-text">{this.props.label}</label>
-        <input
-          id="input-border"
-          className="form-control form-control-lg "
-          type={this.props.type}
-          name={this.props.name}
-        />
-      </div>
-    );
-  }
-}
+
 class Text extends Component {
   state = {};
   render() {
