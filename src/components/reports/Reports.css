@@ -19,10 +19,6 @@
     color: #202022;
 }
 
-.reports-table{
-
-}
-
 .reports-table-row{
     display: grid;
     grid-template-columns: 210px repeat(7, 1fr);
