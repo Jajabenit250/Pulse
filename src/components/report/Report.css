@@ -12,10 +12,6 @@
     color: #000000;
 }
 
-.report-table{
-
-}
-
 .report-table-row{
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
