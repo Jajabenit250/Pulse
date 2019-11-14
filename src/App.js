@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 
+import { Reports } from "./components/reports/Reports";
 import { Report } from "./components/report/Report";
 
 function App() {
@@ -97,7 +98,10 @@ function App() {
 
   return (
     <div className="container">
-      <Report/>
+      Builds the app for production to the build folder.
+        It correctly bundles React in production mode and optimizes the build for the best performance.
+      <Reports data={data[0]} />
+      {/* <Report data={reports[0].reviews}/> */}
     </div>
   );
 }
