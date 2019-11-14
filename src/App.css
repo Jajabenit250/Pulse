@@ -5,7 +5,4 @@ html,body, #root{
 
 .container{
     height: 100%;
-    display: grid;
-    align-items: center;
-    justify-items: center;
 }
