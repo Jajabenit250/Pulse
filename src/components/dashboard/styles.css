@@ -85,7 +85,7 @@ h1 {
 .circle {
     display: flex;
     position: absolute;
-    /* margin: 0 10px; */
+    margin: 0 10px;
 }
 .not_completed {
     padding: 8px;

@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
+import './styles.css';
 
 class MainMenu extends Component {
 
    render() {
       // Function to loop through the twelve circles
 
-      const loopThroughPeriod = (arr) => {
-         return arr.map((item)=>{
-            return <div className={(item === 1 || item === 2) ? "completed" : "not_completed"}>{item}</div>
+      const loopThroughPeriod = (periods) => {
+         return periods.map((period)=>{
+            return <div className={(period === 1 || period === 2) ? "completed" : "not_completed"}>{period}</div>
          })
       }
       return (
