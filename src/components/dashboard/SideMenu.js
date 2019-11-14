@@ -9,12 +9,12 @@ class SideMenu extends Component {
         // this where the side menu component is implemented
         return (
             <div className="side-menu">
-                <img src={logo} alt="Logo"/>
+                <img src={logo} alt="Logo" className="img-dashboard"/>
                 <div className="info">
                     <div className="avatar"></div>
                     <h2>John Doe</h2>
                     <p>john.doe@gmail.com</p>
-                    <button>Sign out</button>
+                    <button className="btn-dashboard">Sign out</button>
                 </div>
             </div>
         )

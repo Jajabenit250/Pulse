@@ -49,7 +49,7 @@ left: 910px;
 top: 309px;
 }
 
-#loginSignUpInput{
+.loginSignUpInput{
   width: 99%;
   height: 40px;
   border: #0094FF solid 1px;
