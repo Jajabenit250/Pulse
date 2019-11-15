@@ -8,7 +8,7 @@ import {
 import './index.css';
 
 import Account from './components/account/account';
-import Dashboard from './components/dashboard/dashboard';
+import Dashboard from './components/dashboard/Dashboard';
 
 ReactDOM.render(<Router>
   <Switch>

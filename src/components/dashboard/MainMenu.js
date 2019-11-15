@@ -5,12 +5,12 @@ class MainMenu extends Component {
 
    render() {
       // Function to loop through the twelve circles
-
       const loopThroughPeriod = (periods) => {
          return periods.map((period, index)=>{
-            return <div className={(period === 1 || period === 2) ? "completed" : "not_completed"} onClick={() => this.props.onClick(index)} key={index}>{period}</div>
+            return <div style={{cursor: "pointer"}} className={(period === 1 || period === 2) ? "completed" : "not_completed"} onClick={() => this.props.onClick(index)} key={index}>{period}</div>
          })
       }
+
       return (
 
          // this is where the main menu component is implemented
@@ -22,9 +22,11 @@ class MainMenu extends Component {
                <div className="line"></div>
                <div className="circle">{loopThroughPeriod([1,2,3,4,5,6,7,8,9,10,11,12])}</div>
             </div>
-      )
+      );
    }
    
 }
 
-export default MainMenu
+export default MainMenu;
+
+{/* <Report data={reports[0].reviews}/> */}
