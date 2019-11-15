@@ -7,8 +7,8 @@ class MainMenu extends Component {
       // Function to loop through the twelve circles
 
       const loopThroughPeriod = (periods) => {
-         return periods.map((period)=>{
-            return <div className={(period === 1 || period === 2) ? "completed" : "not_completed"}>{period}</div>
+         return periods.map((period, index)=>{
+            return <div className={(period === 1 || period === 2) ? "completed" : "not_completed"} onClick={() => this.props.onClick(index)} key={index}>{period}</div>
          })
       }
       return (
