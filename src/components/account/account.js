@@ -29,8 +29,10 @@ export class Account extends Component {
                         <img alt="bg" src={btbg}/>
                     </div>
                 </div>
+                <div>
                 {this.state.component === "Signin" ? <LoginPage changeComponent={this.changeComponent}/> : <Signup changeComponent={this.changeComponent}/>}
-            </div>
+          </div>  
+          </div>
         )
     }
 }
