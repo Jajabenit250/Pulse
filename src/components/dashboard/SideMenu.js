@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './assets/logoPulse.png';
+import logo from '../../images/logoPulse.png';
 import './styles.css';
 
 class SideMenu extends Component {
@@ -9,7 +9,7 @@ class SideMenu extends Component {
         // this where the side menu component is implemented
         return (
             <div className="side-menu">
-                <img src={logo} alt="Logo" className="img-dashboard"/>
+                <img src={logo} alt="Logo" className="img-dashboard" />
                 <div className="info">
                     <div className="avatar"></div>
                     <h2>John Doe</h2>
