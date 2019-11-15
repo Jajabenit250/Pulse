@@ -7,6 +7,7 @@ export class Reports extends Component {
         return (
             <div className="model-container">
                 <div className="reports-model">
+                    <div className="close-model" onClick={this.props.closeModel}>X</div>
                     <div className="reports-row pd-16">
                         <div className="reports-header">Reports</div>
                     </div>
