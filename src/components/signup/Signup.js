@@ -43,7 +43,7 @@ class Signup extends Component {
 
             <Link to="/"><button className="signup-button">Sign up</button></Link>
             <div onClick={()=>{this.props.changeComponent("Signin")}}>
-              <a href="#"><Text text="Go to sign in" /></a>
+             <h3 className="signin-text">Go to sign in</h3>
             </div>
 </form>
 </div>
