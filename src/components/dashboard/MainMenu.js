@@ -28,5 +28,3 @@ class MainMenu extends Component {
 }
 
 export default MainMenu;
-
-{/* <Report data={reports[0].reviews}/> */}
