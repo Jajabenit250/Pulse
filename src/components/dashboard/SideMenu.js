@@ -14,7 +14,7 @@ class SideMenu extends Component {
                     <div className="avatar"></div>
                     <h2>John Doe</h2>
                     <p>john.doe@gmail.com</p>
-                    <button className="btn-dashboard">Sign out</button>
+                    <div className="btn__container"><button className="btn-dashboard">Sign out</button></div>
                 </div>
             </div>
         )
