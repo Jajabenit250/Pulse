@@ -30,7 +30,8 @@ export class Account extends Component {
                     </div>
                 </div>
                 <div>
-                {this.state.component === "Signin" ? <LoginPage changeComponent={this.changeComponent}/> : <Signup changeComponent={this.changeComponent}/>}
+                {this.state.component === "Signin" ? <LoginPage changeComponent={this.changeComponent}
+                 setSignedInUser={this.props.setSignedInUser} /> : <Signup changeComponent={this.changeComponent}/>}
           </div>  
           </div>
         )
