@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component }from 'react';
+
 import './styles.css';
-const SearchBox = () => {
-   return (
-      <div>
-         <input type="text" placeholder="Search for an engineer" className="searchbox"/>
-      </div>
-   )
+class SearchBox extends Component{
+
+   render() {
+      return (
+         <div className={this.props.user.type === 'Software Engineer' ? "hide__search-box" : ""}>
+            <input type="text" placeholder="Search for an engineer" className="searchbox" />
+         </div>
+      )
+   }
 }
 
 export default SearchBox

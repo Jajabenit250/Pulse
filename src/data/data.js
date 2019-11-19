@@ -109,20 +109,20 @@ export const users = [
     names: "shema eric",
     email:"shema.eric@gmail.com",
     password:'Shemaeric1',
-    type:'LF'
+    type:'Learning Facilitator'
   },
   {
     userId: 2,
     names: "uwineza aime",
     email:"uwineza.aime@gmail.com",
     password:'Uwinezaaime1',
-    type:'Engineer'
+    type:'Software Engineer'
   },
   {
     userId: 3,
     names: "kamanzi deo",
     email:"kamanzi.deo@gmail.com",
     password:'Kamanzideo1',
-    type:'LF'
+    type:'Learning Facilitator'
   },
 ];
