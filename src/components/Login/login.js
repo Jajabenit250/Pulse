@@ -16,8 +16,19 @@ class LoginPage extends Component {
   };
 
   signin() {
-    const { PasswordError, EmailError } = this.state;
-    if (PasswordError === "" && EmailError === "") {
+    const { PasswordError, EmailError, email, password } = this.state;
+    if(email === "" || password === ""){
+       if(email === '') {
+        this.setState({
+          EmailError: "Email is required",
+    });
+       }else{
+          this.setState({
+            PasswordError: "Password is required",
+      });
+       }
+      
+    }else if (PasswordError === "" && EmailError === "") {
       users.map(user => {
         if (
           this.state.email === user.email &&
