@@ -14,11 +14,11 @@
     width: 80px;
     margin: 20px 110px;
 }
-.info .avatar {
-    background: lightgray;
+.info .avatar img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border: 1px solid lightgray;
+    border-radius: 90%;
     margin: 0 auto;
 }
 .info h2 {
@@ -138,6 +138,18 @@ h1 {
 }
 .hide-main-menu__floating-button {
     display: none;
+}
+.average{
+    position: absolute;
+    top: 56%;
+    left: 72%;
+    padding: 7px 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 19%;
+    text-align: center;
 }
 /* MainMenu styles end */
 

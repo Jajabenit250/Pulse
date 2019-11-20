@@ -3,12 +3,12 @@ export const data = [
     week: "Week one",
     reports: [
       {
-        userId: 1,
+        userId: 2,
         names: "Dominique Nsengimana",
         reviews: {
           quality: {
             name: "Quality",
-            rating: 2,
+            rating: 1,
             review: "Satisfied",
             reviewMessage:
               "Ouilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
@@ -36,14 +36,14 @@ export const data = [
           },
           professionalism: {
             name: "Professionalism",
-            rating: 2,
+            rating: 0,
             review: "Satisfied",
             reviewMessage:
               "Yuilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
           },
           integration: {
             name: "Integration",
-            rating: 2,
+            rating: 0,
             review: "Satisfied",
             reviewMessage:
               "Guilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
@@ -51,12 +51,12 @@ export const data = [
         }
       },
       {
-        userId: 2,
-        names: "Dominique Nsengimana",
+        userId: 3,
+        names: "Dom Nsengimana",
         reviews: {
           quality: {
             name: "Quality",
-            rating: 2,
+            rating: 1,
             review: "Satisfied",
             reviewMessage:
               "Ouilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
@@ -84,14 +84,14 @@ export const data = [
           },
           professionalism: {
             name: "Professionalism",
-            rating: 2,
+            rating: 0,
             review: "Satisfied",
             reviewMessage:
               "Yuilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
           },
           integration: {
             name: "Integration",
-            rating: 2,
+            rating: 0,
             review: "Satisfied",
             reviewMessage:
               "Guilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."

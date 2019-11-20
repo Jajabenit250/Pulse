@@ -11,12 +11,16 @@ class App extends Component {
   setSignedInUser = user => {
     this.setState({ user: user });
   };
+
+  emptyState = () => {
+    this.setState({user: {}})
+}
   render() {
     return (
       <Router>
         <Switch>
           <Route exact path="/">
-            <Dashboard user={this.state.user} />
+            <Dashboard user={this.state.user} onClick={this.emptyState}/>
           </Route>
           <Route path="/account">
             <Account setSignedInUser={this.setSignedInUser} />
