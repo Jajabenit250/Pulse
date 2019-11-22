@@ -7,7 +7,7 @@ export class Reports extends Component {
         return (
             <div className="model-container">
                 <div className="reports-model">
-                    <div className="close-model" onClick={this.props.closeModel}>X</div>
+                    <div className="close-model-r" onClick={this.props.closeModel}>X</div>
                     <div className="reports-row pd-16">
                         <div className="reports-header">Reports</div>
                     </div>
@@ -28,7 +28,7 @@ export class Reports extends Component {
                             </div>
                             {this.props.data.reports.map((item, index) => {
                                 return (
-                                    <div key={index} className="reports-table-row row-items pd-16">
+                                    <div onClick={()=>{this.props.viewEngineer(item)}} key={index} className="reports-table-row row-items pd-16">
                                         <div className="reports-table-col row-item">{item.names}</div>
                                         <div className="reports-table-col row-item">{item.reviews.quality.rating}</div>
                                         <div className="reports-table-col row-item">{item.reviews.quantity.rating}</div>
@@ -36,7 +36,7 @@ export class Reports extends Component {
                                         <div className="reports-table-col row-item">{item.reviews.communication.rating}</div>
                                         <div className="reports-table-col row-item">{item.reviews.professionalism.rating}</div>
                                         <div className="reports-table-col row-item">{item.reviews.integration.rating}</div>
-                                        <div className="reports-table-col row-item">{(item.reviews.quality.rating + item.reviews.quantity.rating + item.reviews.initiative.rating + item.reviews.communication.rating + item.reviews.professionalism.rating + item.reviews.integration.rating) / 6}</div>
+                                        <div className="reports-table-col row-item">{item.reviews.quality.rating !== "-" ? ((item.reviews.quality.rating + item.reviews.quantity.rating + item.reviews.initiative.rating + item.reviews.communication.rating + item.reviews.professionalism.rating + item.reviews.integration.rating) / 6).toFixed(1) : '-'}</div>
                                     </div>
                                 );
                             })}
