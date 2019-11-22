@@ -84,3 +84,13 @@
     background: rgba(196, 196, 196, 0.2);
     backdrop-filter: blur(2px);
 }
+
+.close-model{
+    position: absolute;
+    top: 12%;
+    right: 36%;
+    padding: 8px 16px;
+    background-color: #0094FF;
+    color: white;
+    cursor: pointer;
+}

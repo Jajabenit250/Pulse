@@ -13,9 +13,14 @@ export class Report extends Component {
     }
 
     render() {
-        const data = [this.props.data.quality, this.props.data.quantity,this.props.data.initiative,this.props.data.communication,this.props.data.professionalism, this.props.data.integration];
+        let data = [];
+        
+        if (this.props.data.reviews) {
+            data = [this.props.data.reviews.quality, this.props.data.reviews.quantity,this.props.data.reviews.initiative,this.props.data.reviews.communication,this.props.data.reviews.professionalism, this.props.data.reviews.integration];
+        }
         return (
             <div className="model-container">
+                <div className="close-model" onClick={this.props.closeModel}>X</div>
                 <div className="report-model">
                     <div className="report-row pd-16">
                         <div className="report-header">Attributes</div>
@@ -35,7 +40,7 @@ export class Report extends Component {
                                 );
                             })}
 
-                            <div className="report-table-review">{data[this.state.selectedIndex].reviewMessage}</div>
+                            <div className="report-table-review">{data.length > 0 ? data[this.state.selectedIndex].reviewMessage : ''}</div>
                         </div>
                     </div>
                 </div>
