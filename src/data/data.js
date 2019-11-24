@@ -3555,22 +3555,53 @@ export const users = [
   {
     userId: 4,
     names: "shema eric",
-    email:"shema.eric@gmail.com",
+    email:"shema.eric1@gmail.com",
     password:'Shemaeric1',
     type:'Learning Facilitator'
   },
   {
     userId: 5,
     names: "uwineza aime",
-    email:"uwineza.aime@gmail.com",
+    email:"uwineza.aime1@gmail.com",
     password:'Uwinezaaime1',
     type:'Software Engineer'
   },
   {
     userId: 6,
     names: "kamanzi deo",
-    email:"kamanzi.deo@gmail.com",
+    email:"kamanzi.deo1@gmail.com",
     password:'Kamanzideo1',
     type:'Learning Facilitator'
   },
+  {
+    userId: 4,
+    names: "mukunzi theo",
+    email:"mukunzi.theo2@gmail.com",
+    password:'Mukunzitheo1',
+    type:'Learning Facilitator'
+  }
+];
+
+
+export const Simulations = [
+{
+id: 1,
+number: 1,
+LFID: 3
+},
+{
+  id: 2,
+  number: 2,
+  LFID: 3
+  },
+  {
+    id: 3,
+    number: 4,
+    LFID: 3
+    },
+  {
+    id: 4,
+    number: 5,
+    LFID: 4
+    }
 ];
