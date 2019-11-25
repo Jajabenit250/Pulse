@@ -135,17 +135,18 @@ export class Submit extends Component {
           <div className="report-row">
             <div className="report-table">
               {data.map((item, index) => {
-                const reviewChecker = (event) => {
-                  if ((event.target.value = -2)) {
-                    return (this.state.review = "very poor");
-                  } else if ((event.target.value = -1)) {
-                    return (this.state.review = "poor");
-                  } else if ((event.target.value = 0)) {
-                    return (this.state.review = "satisfied");
-                  } else if ((event.target.value = 1)) {
-                    return (this.state.review = "very satisfied");
-                  } else event.target.value = 2;
-                  return (this.state.review = "perfect");
+                const reviewChecker = (review) => {
+                  review = this.state.rating;
+                  if ((review = -2)) {
+                    return (review = "very poor");
+                  } else if ((review = -1)) {
+                    return (review = "poor");
+                  } else if ((review= 0)) {
+                    return (review = "satisfied");
+                  } else if ((review = 1)) {
+                    return (review = "very satisfied");
+                  } else review = 2;
+                  return (review= "perfect");
                 };
                 return (
                   <div
