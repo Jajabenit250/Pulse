@@ -30,7 +30,7 @@ export class Dashboard extends Component {
 
     openReportModal = (index) => {
         if (this.props.user.type === 'Software Engineer') {
-            if (weeks[index].competed) {
+            if (weeks[index].completed) {
                 this.setState({ week: index });
                 this.setState({ isReportComponentActive: true });
             }
@@ -47,10 +47,9 @@ export class Dashboard extends Component {
     closeModelR = () => {
         this.setState({ isReportComponentActive: false });
     }
-
     getAverage = (userID) => {
     let av = 0;
-    weeks.forEach(item => {
+    weeks.filter(week => week.completed).forEach(item => {
       const userReport = item.reports.find(report => report.userId === userID);
       av +=
         (userReport.reviews.quality.rating +
@@ -66,12 +65,13 @@ export class Dashboard extends Component {
   };
 
   //this function helps to get simulation card on dashboard
-  simulationCard(average) {
+  simulationCard(average,allWeeklyAverages) {
     if (this.props.user.type === "Software Engineer") {
       return (
         <MainMenu
           title={"Simulation "}
           average={average}
+          each={allWeeklyAverages}
           onClick={this.openReportModal}
           user={this.props.user}
         />
@@ -88,6 +88,7 @@ export class Dashboard extends Component {
               average={average}
               onClick={this.openReportModal}
               user={this.props.user}
+              
             />
           );
         } else {
@@ -97,12 +98,42 @@ export class Dashboard extends Component {
       });
     }
   }
-
-  render() {
-    let average = 0;
-    if (this.props.user.userId) {
-     average = this.getAverage(this.props.user.userId);
+    getEachAverage = (id) =>{
+        let qualityAverage = 0, quantityAverage = 0 , initiativeAverage = 0, professionalismAverage = 0, communicationAverage = 0, integrationAverage = 0;
+        let allAverages;
+        weeks.filter(week => week.completed).forEach(user => {
+            const isUserRates = user.reports.find(user => user.userId === id);
+            if(isUserRates) {
+                qualityAverage += isUserRates.reviews.quality.rating;
+                quantityAverage += isUserRates.reviews.quantity.rating;
+                initiativeAverage += isUserRates.reviews.initiative.rating;
+                professionalismAverage += isUserRates.reviews.professionalism.rating;
+                communicationAverage += isUserRates.reviews.communication.rating;
+                integrationAverage += isUserRates.reviews.integration.rating;
+            }
+            return false;
+        });
+        allAverages = [
+            (qualityAverage/weeks.length).toFixed(1), 
+            (quantityAverage/weeks.length).toFixed(1), 
+            (initiativeAverage/weeks.length).toFixed(1), 
+            (professionalismAverage/weeks.length).toFixed(1), 
+            (communicationAverage/weeks.length).toFixed(1), 
+            (integrationAverage/weeks.length).toFixed(1),
+        ]     
+        return allAverages;
     }
+
+    render() {
+        let average = 0;
+        let allWeeklyAverages = {};
+        if (this.props.user.userId) {
+            allWeeklyAverages = this.getEachAverage(this.props.user.userId);
+            average = this.getAverage(this.props.user.userId);
+            console.log(average);
+            
+        }
+    // }
 
     if (this.props.user.userId && this.props.user.type === 'Software Engineer') {
       this.userData = weeks[this.state.week].reports.find(week => week.userId === this.props.user.userId);
@@ -114,7 +145,7 @@ export class Dashboard extends Component {
           <div className="searchbox__wraper">
             <SearchBox user={this.props.user} />{" "}
           </div>{" "}
-          {this.simulationCard(average.toFixed(1))}
+          {this.simulationCard(average.toFixed(1), allWeeklyAverages)}
         </div>
         <div
           style={{

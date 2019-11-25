@@ -1,7 +1,7 @@
 export const weeks = [
   {
     week: "Week one",
-    competed: true,
+    completed: true,
     reports: [
       {
         userId: 1,
@@ -9,7 +9,7 @@ export const weeks = [
         reviews: {
           quality: {
             name: "Quality",
-            rating: 1,
+            rating: 2,
             review: "Satisfied",
             reviewMessage:
               "Ouilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
@@ -105,7 +105,7 @@ export const weeks = [
         reviews: {
           quality: {
             name: "Quality",
-            rating: 1,
+            rating: 2,
             review: "Satisfied",
             reviewMessage:
               "Ouilds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance."
@@ -295,7 +295,7 @@ export const weeks = [
   },
   {
     week: "Week two",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -589,7 +589,7 @@ export const weeks = [
   },
   {
     week: "Week three",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -883,7 +883,7 @@ export const weeks = [
   },
   {
     week: "Week four",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -1177,7 +1177,7 @@ export const weeks = [
   },
   {
     week: "Week five",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -1471,7 +1471,7 @@ export const weeks = [
   },
   {
     week: "Week six",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -1765,7 +1765,7 @@ export const weeks = [
   },
   {
     week: "Week seven",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -2059,7 +2059,7 @@ export const weeks = [
   },
   {
     week: "Week eight",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -2353,7 +2353,7 @@ export const weeks = [
   },
   {
     week: "Week nine",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -2647,7 +2647,7 @@ export const weeks = [
   },
   {
     week: "Week ten",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -2941,7 +2941,7 @@ export const weeks = [
   },
   {
     week: "Week eleven",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
@@ -3235,7 +3235,7 @@ export const weeks = [
   },
   {
     week: "Week twelve",
-    competed: false,
+    completed: false,
     reports: [
       {
         userId: 1,
